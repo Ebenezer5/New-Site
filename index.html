@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<style>
+    body{
+        background-color: rgb(8, 6, 26);
+        color: white;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+}
+  
+.centered_links {
+    text-transform: capitalize;
+    text-align: center;
+    padding-bottom: 40px;
+    border: 1px solid aqua;
+    text-align: center;
+    background-color: rgb(1, 1, 17);
+    margin: 1rem;
+    border-radius: 15px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.centered_links a{
+    text-decoration: none;
+    padding: 1rem;
+    color: white;
+}
+
+.downl_cv{ 
+    background-color: rgb(12, 62, 116);
+    border-radius: 8px;
+    border: 1px solid aqua;
+    font-weight: bold;
+    font-size:  16px;
+    margin: 1rem;
+    padding: 5px 10px;
+    transition-duration: .5s;
+}
+
+.downl_cv a{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+.downl_cv:hover{
+    background-color: darkgray;
+    border: none;
+}
+span {
+    font-size: 20px;
+    padding-left: 1vh;
+}
+
+.social_handles{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2vh;
+    padding-top: 1rem;
+    cursor: pointer;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.social_handles img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.line {
+    text-align: center;
+    max-width: 400px;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.774);
+}
+
+.intro{
+    font-size: 17px;
+    text-align: center;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+
+h2 ,p{
+    text-align: center;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p a {
+   color: #007BFF;
+   color: aqua;
+   text-decoration: none;
+   font-weight: bold;
+   margin: 0 10px;
+}
+
+p a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: sans-serif;
+    padding-bottom: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.profile h3 {
+    margin-bottom: 30px; /* Adjust spacing between text and image */
+    text-transform: uppercase;
+}
+
+.profile p{
+    max-width: 500px;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px; /* Adjust spacing between image and text */
+}
+
+hr{
+    width: 300px;
+}
+
+
+footer {
+    background-color: rgb(1, 1, 17);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 110px;
+    border-top: 1px solid aqua;
+}
+
+footer .footer-links {
+    margin-bottom: 20px;
+}
+
+footer .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.1rem;
+}
+
+footer .footer-links a:hover {
+    color: aqua;
+}
+
+footer .footer-info p {
+    font-size: 1rem;
+}
+
+footer .footer-info p a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .footer-info p a:hover {
+    color: aqua;
+}
+
+
+@media only screen and (max-width: 419px) {
+    /* set media screen for all devices */
+
+}
+</style>
+<body>
+
+    <div class="centered_links">
+        <a href="index.html">home</a>
+        <a href="service.html">service</a>
+        <a href="news.html">news</a>
+        <a href="contact.html">contact</a>
+    </div>
+
+    <h1 class="intro">Hi, I'm Ebenezer, a front-end developer with four years of experience. I love creating websites and
+        web apps that look great and work well. Right now, I’m focusing on improving my skills in
+        Flask(back-end) and learning more about Python to expand what I can do.
+    </h1>
+    <div class="social_handles">
+        <button class="downl_cv"><a href="#">Download CV <span>&downarrow;</span></a></button>
+        <img src="instagram.png" alt="">
+        <img src="Whatsapp.png" alt="">
+    </div>
+    <p class="line">|</p>    
+   
+    <div class="profile">
+        <h3>about me</h3>
+        <img src="Ebens.jpg" alt="Profile Picture">
+        <p> After graduating from senior high school, I followed my passion for web development by enrolling
+            at IBB, where I completed an intensive seven-month program. This experience sparked a deeper
+            interest in technology and programming, leading me to pursue a three-year Higher National
+            Diploma (HND) in Information Technology at Takoradi Technical University (TTU). <br><br> During my
+            studies, I gained hands-on experience with various programming languages and technologies,
+            mastering C++, Java, Visual Basic, Python, and html.
+            <br><br>
+            Beyond academics, I worked on several projects that honed my problem-solving skills and
+            strengthened my ability to create efficient and user-friendly solutions. My passion for coding and
+            continuous learning drives me to stay updated on emerging technologies, ensuring I can deliver
+            innovative solutions in the ever-evolving tech landscape.</p>    
+    </div>
+
+     <hr>
+    
+     <p>To continue enjoying all the features and content on my website, kindly sign up if you’re new here. If you already have an account, simply log in to pick up right where you left off. <br> I look forward to providing you with great content and services!</p>
+    <p>
+        <a href="{{ url_for('signup') }}">Sign up</a>
+        <a href="{{ url_for('login') }}">Log in</a> 
+    </p>
+    </body>
+    
+<!-- Footer Section -->
+<footer>
+    <div class="footer-info">
+        <p>&copy; 2024 More Things Industry. All Rights Reserved.</p>
+    </div>
+</footer>
+</html>

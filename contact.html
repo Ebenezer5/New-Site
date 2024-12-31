@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+body {
+    margin: 0;
+    background-color: rgb(0, 7, 14);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+        
+.centered_links {
+    text-transform: capitalize;
+    text-align: center;
+    padding-bottom: 40px;
+    border: 1px solid aqua;
+    text-align: center;
+    background-color: rgb(1, 1, 17);
+    margin: 1rem;
+    border-radius: 15px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+         
+}
+
+.centered_links a{
+    text-decoration: none;
+    padding: 1rem;
+    color: white;
+}
+
+h1, h2, p {
+    text-align: center;
+    text-transform: capitalize;
+    margin: 1rem;
+    padding: 20px;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: rgb(1, 1, 17);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    background-color: rgb(24, 32, 48);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: aqua;
+    border: none;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: rgb(0, 204, 255);
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    text-transform: none;
+}
+
+/* Footer Style */
+footer {
+    background-color: rgb(1, 1, 17);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 1px solid aqua;
+}
+
+footer .footer-links {
+    margin-bottom: 20px;
+}
+
+footer .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.1rem;
+}
+
+footer .footer-links a:hover {
+    color: aqua;
+}
+
+footer .footer-info p {
+    font-size: 1rem;
+}
+
+footer .footer-info p a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .footer-info p a:hover {
+    color: aqua;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 15px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 0.9rem;
+    }
+
+    footer .footer-links a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+</style>
+</head>
+<body>
+    <div class="centered_links">
+        <a href="index.html">Home</a>
+        <a href="service.html">Service</a>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <h1>Contact Us</h1>
+    <p>Have any questions or feedback? Please feel free to reach out to us!</p>
+
+    <div class="contact-container">
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p>If you prefer, you can also contact me using the information below:</p>
+        <p>Email: ebenegyir5@gmailcom.com</p>
+        <p>Phone: +233 55 6764 730</p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-info">
+            <p>&copy; 2024 More Things Industry. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: backgroundColorChange 10s infinite alternate; /* Background color animation */
+}
+
+.centered_links {
+    text-transform: capitalize;
+    text-align: center;
+    padding-bottom: 40px;
+    border: 1px solid aqua;
+    background-color: rgb(1, 1, 17);
+    margin: 1rem;
+    border-radius: 15px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.centered_links a {
+    text-decoration: none;
+    padding: 1rem;
+    color: white;
+}
+
+h1, h2, p {
+    text-align: center;
+    text-transform: capitalize;
+    margin: 6rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+h1 {
+    color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+h1 span {
+    color: aqua;
+}
+
+/* Fade-in and Pulse Animation */
+@keyframes pulse {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+h1 {
+    animation: pulse 3s ease-in-out infinite; /* Infinite pulse animation */
+}
+
+/* Background color animation */
+@keyframes backgroundColorChange {
+    0% {
+        background-color: rgb(1, 53, 105); /* Dark Blue */
+    }
+    50% {
+        background-color: rgb(5, 44, 44); /* Bright Teal */
+    }
+    100% {
+        background-color: rgb(87, 1, 87); /* Soft Purple */
+    }
+}
+
+</style>
+</head>
+<body>
+    <div class="centered_links">
+        <a href="index.html">home</a>
+        <a href="service.html">service</a>
+        <a href="news.html">news</a>
+        <a href="contact.html">contact</a>
+    </div>
+
+    <h1>coming <span>soon....</span></h1>
+
+</body>     
+</html>
