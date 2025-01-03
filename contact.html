@@ -12,13 +12,32 @@ body {
     color: white;
 }
 
-        
+@keyframes rotateBorder {
+    0% {
+        border-color: aqua; /* First color */
+    }
+    20% {
+        border-color: #FF5733; /* Red */
+    }
+    40% {
+        border-color: #33FF57; /* Green */
+    }
+    60% {
+        border-color: #3357FF; /* Blue */
+    }
+    80% {
+        border-color: #FF33A1; /* Pink */
+    }
+    100% {
+        border-color: aqua; /* Back to the first color */
+    }
+}
+
 .centered_links {
     text-transform: capitalize;
     text-align: center;
     padding-bottom: 40px;
-    border: 1px solid aqua;
-    text-align: center;
+    border: 5px solid aqua;  /* Initial border color */
     background-color: rgb(1, 1, 17);
     margin: 1rem;
     border-radius: 15px;
@@ -26,8 +45,9 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-         
+    animation: rotateBorder 5s infinite; /* Apply the rotating border animation */
 }
+
 
 .centered_links a{
     text-decoration: none;
