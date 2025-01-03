@@ -6,13 +6,13 @@
     <title>Home</title>
 </head>
 <style>
-    body{
-        background-color: rgb(8, 6, 26);
-        color: white;
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
+ body {
+    background-color: rgb(1, 9, 17);
+    color: white;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
-  
+
 .centered_links {
     text-transform: capitalize;
     text-align: center;
@@ -32,6 +32,15 @@
     text-decoration: none;
     padding: 1rem;
     color: white;
+}
+
+.intro{
+    font-size: 17px;
+    text-align: center;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
 }
 
 .downl_cv{ 
@@ -54,6 +63,7 @@
 .downl_cv:hover{
     background-color: darkgray;
     border: none;
+
 }
 span {
     font-size: 20px;
@@ -83,15 +93,6 @@ span {
     max-width: 400px;
     font-size: 40px;
     color: rgba(255, 255, 255, 0.774);
-}
-
-.intro{
-    font-size: 17px;
-    text-align: center;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 20px;
 }
 
 h2 ,p{
@@ -184,8 +185,198 @@ footer .footer-info p a:hover {
 }
 
 
-@media only screen and (max-width: 419px) {
-    /* set media screen for all devices */
+@media only screen and (min-width: 360px) and (max-width: 880px) {
+.centered_links {
+    text-transform: capitalize;
+    text-align: center;
+    padding-bottom: 40px;
+    border: 1px solid aqua;
+    background-color: rgb(1, 1, 17);
+    margin: 1rem;
+    border-radius: 15px;
+    padding: 20px;
+    width: 83%;
+    margin-left: 23px;
+    padding-right: px;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.centered_links a{
+    text-decoration: none;
+    padding: 1rem;
+    color: white;
+}
+
+.intro{
+    font-size: 17px;
+    text-align: center;
+    width: 90%;
+    padding-top: 20px;
+}
+
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: sans-serif;
+    padding-bottom: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.profile h3 {
+    margin-bottom: 30px; /* Adjust spacing between text and image */
+    text-transform: uppercase;
+}
+
+.profile p{
+    width: 90%;
+}
+
+.profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+p{
+    width: 90%;
+}
+}
+
+
+@media only screen and (min-width: 412px) and (max-width: 915px) {
+.centered_links {
+    text-transform: capitalize;
+    text-align: center;
+    padding-bottom: 40px;
+    border: 1px solid aqua;
+    background-color: rgb(1, 1, 17);
+    margin: 1rem;
+    border-radius: 15px;
+    padding: 15px;
+    width: 83%;
+    margin-left: 23px;
+    padding-left: 1vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.centered_links a{
+    text-decoration: none;
+    padding: 1rem;
+    color: white;
+    padding-left: 22px;
+}
+
+.intro{
+    font-size: 17px;
+    text-align: center;
+    width: 90%;
+    padding-top: 20px;
+}
+
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: sans-serif;
+    padding-bottom: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.profile h3 {
+    margin-bottom: 30px; /* Adjust spacing between text and image */
+    text-transform: uppercase;
+}
+
+.profile p{
+    width: 90%;
+}
+
+.profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+p{
+    width: 90%;
+}
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+.centered_links {
+    text-transform: capitalize;
+    text-align: center;
+    padding-bottom: 40px;
+    border: 1px solid aqua;
+    background-color: rgb(1, 1, 17);
+    margin: 1rem;
+    border-radius: 15px;
+    padding: 15px;
+    width: 83%;
+    margin-left: 20%;
+    padding-left: 6vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.centered_links a{
+    text-decoration: none;
+    padding: 1rem;
+    color: white;
+    padding-left: 22px;
+}
+
+.intro{
+    font-size: 17px;
+    text-align: center;
+    width: 90%;
+    padding-top: 20px;
+}
+
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: sans-serif;
+    padding-bottom: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.profile h3 {
+    margin-bottom: 30px; /* Adjust spacing between text and image */
+    text-transform: uppercase;
+}
+
+.profile p{
+    width: 90%;
+}
+
+.profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+p{
+    width: 90%;
+}
 
 }
 </style>
@@ -217,7 +408,7 @@ footer .footer-info p a:hover {
             interest in technology and programming, leading me to pursue a three-year Higher National
             Diploma (HND) in Information Technology at Takoradi Technical University (TTU). <br><br> During my
             studies, I gained hands-on experience with various programming languages and technologies,
-            mastering C++, Java, Visual Basic, Python, and html.
+            mastering C++, Java, Visual Basic, bootstrap and Python.
             <br><br>
             Beyond academics, I worked on several projects that honed my problem-solving skills and
             strengthened my ability to create efficient and user-friendly solutions. My passion for coding and
@@ -237,7 +428,7 @@ footer .footer-info p a:hover {
 <!-- Footer Section -->
 <footer>
     <div class="footer-info">
-        <p>&copy; 2024 More Things Industry. All Rights Reserved.</p>
+        <p>&copy; 2025 All Rights Reserved. Design by Ebenezer Kwame Egyir (More Things)</p>
     </div>
 </footer>
 </html>
