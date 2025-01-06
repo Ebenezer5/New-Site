@@ -3,365 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News</title>
-<style>
-    body {
-        margin: 0;
-        background: linear-gradient(105deg, rgb(54, 3, 14), rgb(9, 22, 0)); /* Soft pink to blue gradient */
-        font-family: Arial, Helvetica, sans-serif;
-        color: white;
-    }
+    <meta name="description" content="Latest Tech News on AI, Electric Cars, SpaceX, Quantum Computing, Metaverse, Green Energy, and more.">
+    <meta name="keywords" content="Tech News, AI, ChatGPT, Electric Cars, SpaceX, Quantum Computing, Metaverse, Green Energy, 2025">
+    <meta name="author" content="Ebenezer Kwame Egyir">
+    <title>Tech News</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    @keyframes rotateBorder {
-    0% {
-        border-color: aqua; /* First color */
-    }
-    20% {
-        border-color: #FF5733; /* Red */
-    }
-    40% {
-        border-color: #33FF57; /* Green */
-    }
-    60% {
-        border-color: #3357FF; /* Blue */
-    }
-    80% {
-        border-color: #FF33A1; /* Pink */
-    }
-    100% {
-        border-color: aqua; /* Back to the first color */
-    }
-}
+    <style>
+        body {
+            background-color: #e0f7fa; /* Light Blue Background */
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+        }
 
-.centered_links {
-    text-transform: capitalize;
-    text-align: center;
-    padding-bottom: 40px;
-    border: 5px solid aqua;  /* Initial border color */
-    background-color: rgb(1, 1, 17);
-    margin: 1rem;
-    border-radius: 15px;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-    animation: rotateBorder 5s infinite; /* Apply the rotating border animation */
-}
+        /* Navbar Styles */
+        .navbar {
+            background-color: #0288d1; /* Blue navbar */
+        }
+        .navbar-brand {
+            color: white !important; /* White color for brand name */
+        }
+        .navbar-nav .nav-link {
+            color: white !important; /* White color for nav links */
+        }
+        .navbar-nav .nav-link:hover {
+            color: #dcdcdc !important; /* Hover effect */
+        }
 
-    .centered_links a {
-        text-decoration: none;
-        padding: 1rem;
-        color: white;
-    }
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    h1, h2, p {
-        text-align: center;
-        text-transform: capitalize;
-        margin: 1rem;
-        padding: 20px;
-        border-radius: 15px;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
 
-    h1 {
-        color: white;
-        padding-bottom: 20px;
-        text-transform: uppercase;
-    }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
 
-    .news-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 1rem;
-        padding: 2rem;
-    }
+        .content {
+            padding: 15px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6); /* Dark background for contrast */
+        }
 
-    /* New Style for the News Cards */
-    .news-card {
-        background: rgba(0, 0, 0, 0.8); /* Dark background for cards */
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        height: 300px;
-        position: relative;
-    }
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #0288d1; /* Blue for title */
+        }
 
-    .news-card:hover {
-        transform: translateY(-10px); /* Slight movement effect on hover */
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
-    }
+        .description {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: #dcdcdc;
+        }
 
-    .image-container {
-        width: 100%;
-        height: 160px; /* Fixed height for the image */
-        overflow: hidden;
-    }
+        /* New Color Styles for Each Card */
+        .card-ai { background-color: #4caf50; }
+        .card-electric { background-color: #ff9800; }
+        .card-spacex { background-color: #9c27b0; }
+        .card-quantum { background-color: #3f51b5; }
+        .card-metaverse { background-color: #00bcd4; }
+        .card-green { background-color: #8bc34a; }
 
-    .news-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.85;
-        transition: opacity 0.3s ease;
-    }
+        /* Updated Footer Styles */
+        footer {
+            background-color: #212121; /* Dark grey footer */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 110px;
+            border-top: 1px solid #ffffff; /* Light border on top */
+        }
 
-    .news-card:hover .image-container img {
-        opacity: 1; /* Image becomes clear on hover */
-    }
-
-    .content {
-        padding: 20px;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.7); /* Dark overlay for text */
-        color: white;
-        border-radius: 0 0 15px 15px;
-    }
-
-    .news-card h3 {
-        font-size: 1.4rem;
-        margin-bottom: 10px;
-        color: #00FFFF; /* Aqua color for titles */
-    }
-
-    .news-card .description {
-        font-size: 0.95rem;
-        margin-bottom: 15px;
-        opacity: 0.85;
-    }
-
-    .read-more {
-        background-color: transparent;
-        border: 2px solid #00FFFF;
-        color: #00FFFF;
-        padding: 10px 20px;
-        border-radius: 25px;
-        cursor: pointer;
-        font-size: 0.9rem;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        text-transform: uppercase;
-    }
-
-    .read-more:hover {
-        background-color: #00FFFF;
-        color: black;
-    }
-
-    .up button {
-        color: aqua;
-        background-color: rgba(0, 0, 0, 0.7);
-        width: 50px;
-        height: 50px;
-        float: right;
-        margin: 1rem;
-        margin-top: 33px;
-        padding: 5px;
-        border: 1px solid aqua;
-        border-radius: 50%;
-        font-size: 29px;
-    }
-
-    footer {
-        background-color: rgba(0, 0, 0, 0.8);
-        color: white;
-        padding: 20px;
-        text-align: center;
-        margin-top: 110px;
-        border-top: 1px solid aqua;
-    }
-
-    footer .footer-info p {
-        font-size: 1rem;
-    }
-
-    
-@media only screen and (min-width: 360px) and (max-width: 880px) {
-.centered_links {
-    text-transform: capitalize;
-    text-align: center;
-    padding-bottom: 40px;
-    border: 1px solid aqua;
-    background-color: rgb(1, 1, 17);
-    margin: 1rem;
-    border-radius: 15px;
-    padding: 15px;
-    width: 83%;
-    margin-left: 23px;
-    padding-right: px;
-    padding-left: 0px;
-    display: flex;
-    flex-direction: row;
-}
-
-.centered_links a{
-    text-decoration: none;
-    padding: 1rem;
-    color: white;
-}
-
-}
-
-
-@media only screen and (min-width: 412px) and (max-width: 915px) {
-.centered_links {
-    text-transform: capitalize;
-    text-align: center;
-    padding-bottom: 40px;
-    border: 1px solid aqua;
-    background-color: rgb(1, 1, 17);
-    margin: 1rem;
-    border-radius: 15px;
-    padding: 15px;
-    width: 83%;
-    margin-left: 23px;
-    padding-left: 1vh;
-    display: flex;
-    flex-direction: row;
-}
-
-.centered_links a{
-    text-decoration: none;
-    padding: 1rem;
-    color: white;
-    padding-left: 22px;
-}
-
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1280px) {
-.centered_links {
-    text-transform: capitalize;
-    text-align: center;
-    padding-bottom: 40px;
-    border: 1px solid aqua;
-    background-color: rgb(1, 1, 17);
-    margin: 1rem;
-    border-radius: 15px;
-    padding: 15px;
-    width: 83%;
-    margin-left: 20%;
-    padding-left: 6vh;
-    display: flex;
-    flex-direction: row;
-}
-
-.centered_links a{
-    text-decoration: none;
-    padding: 1rem;
-    color: white;
-    padding-left: 22px;
-}
-
-}
-</style>
+        footer .footer-info p {
+            font-size: 1rem;
+        }
+    </style>
 </head>
 <body>
-    <div class="centered_links">
-        <a href="index.html">home</a>
-        <a href="service.html">service</a>
-        <a href="news.html">news</a>
-        <a href="contact.html">contact</a>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Tech News</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- News Headline -->
+    <h1 class="text-center text-dark my-4">Tech News</h1>
+
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- New News Card 1: AI and ChatGPT in 2025 -->
+            <div class="col-md-4">
+                <div class="card card-ai">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1614154679150-d71d01c8f6b9" class="card-img-top" alt="AI and ChatGPT">
+                    </div>
+                    <div class="card-body content">
+                        <h3 class="card-title">My Perspective on AI and ChatGPT in 2025</h3>
+                        <p class="description">As I see it, artificial intelligence is evolving at an incredible pace, and ChatGPT has proven itself as a useful tool for automating tasks like content creation and customer support. I believe that by 2025, AI will be integrated even more deeply into industries, driving productivity and innovation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New News Card 2: Electric Cars Surging in 2025 -->
+            <div class="col-md-4">
+                <div class="card card-electric">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1606956043647-85ca5c2ffbd2" class="card-img-top" alt="Electric Cars">
+                    </div>
+                    <div class="card-body content">
+                        <h3 class="card-title">Why I Believe Electric Cars Will Surge in 2025</h3>
+                        <p class="description">From what I can observe, electric vehicle (EV) sales have exploded in recent years, and I expect that 2025 will see even greater adoption. With the global push toward carbon neutrality, EVs will play an important role in reshaping the automotive landscape.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New News Card 3: SpaceX's Mission to Mars -->
+            <div class="col-md-4">
+                <div class="card card-spacex">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1602825418452-18034036e698" class="card-img-top" alt="SpaceX Mars Mission">
+                    </div>
+                    <div class="card-body content">
+                        <h3 class="card-title">SpaceX's Mission to Mars: My Take</h3>
+                        <p class="description">In 2025, I’m eagerly awaiting SpaceX’s first manned mission to Mars. This mission represents a major step in human space exploration, and I’m excited about the possibilities for interplanetary colonization.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New News Card 4: Quantum Computing Breakthrough -->
+            <div class="col-md-4">
+                <div class="card card-quantum">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1609434527991-847c3d279d57" class="card-img-top" alt="Quantum Computing">
+                    </div>
+                    <div class="card-body content">
+                        <h3 class="card-title">How I See Quantum Computing Advancing in 2025</h3>
+                        <p class="description">From my point of view, quantum computing is poised to make significant strides in 2025. Breakthroughs in quantum hardware and algorithms will have profound impacts on fields like cryptography, artificial intelligence, and drug development.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New News Card 5: Metaverse and Virtual Reality Growth -->
+            <div class="col-md-4">
+                <div class="card card-metaverse">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1644152988505-b084b30caa0d" class="card-img-top" alt="Metaverse and Virtual Reality">
+                    </div>
+                    <div class="card-body content">
+                        <h3 class="card-title">My Take on the Metaverse and Virtual Reality Growth in 2025</h3>
+                        <p class="description">As I explore the metaverse, I see it gaining significant traction in 2025. With improvements in VR and AR technologies, I believe that the metaverse will allow people to experience immersive virtual worlds in ways that were once unimaginable.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New News Card 6: Green Energy and Sustainability Innovations -->
+            <div class="col-md-4">
+                <div class="card card-green">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1505566238-8c39de63b9c5" class="card-img-top" alt="Green Energy and Sustainability">
+                    </div>
+                    <div class="card-body content">
+                        <h3 class="card-title">Why I Believe Green Energy Will Flourish in 2025</h3>
+                        <p class="description">As I observe the growing interest in sustainability, I feel optimistic about green energy innovations in 2025. Technologies like solar, wind, and energy storage are seeing massive investments, paving the way for a cleaner and more sustainable future.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-
-    <p>In a world where technology evolves rapidly, staying ahead means understanding the latest breakthroughs. Whether it's in artificial intelligence, sustainable energy, or next-gen gadgets, we're here to bring you the stories that matter most. Keep up with the progress, and discover how the future is being created today.</p>
-
-    <h1>headlines</h1>
-
-    <div class="news-container">
-        <!-- News Card 1 -->
-        <div class="news-card">
-            <div class="image-container">
-                <img src="eben (1).jpg" alt="5G Network Expansion">
-            </div>
-            <div class="content">
-                <h3>5G Network Expansion</h3>
-                <p>Telecommunications companies are racing to expand 5G networks across the globe, bringing ultra-fast internet speeds to more urban and rural areas. The rollout of 5G is expected to improve everything from mobile gaming to autonomous driving, providing a foundation for new innovations in IoT (Internet of Things) and smart cities.</p>
-            </div>
-        </div>
-
-        <!-- News Card 2 -->
-        <div class="news-card">
-            <div class="image-container">
-                <img src="eben (1).jpg" alt="Metaverse Developments">
-            </div>
-            <div class="content">
-                <h3>Metaverse Developments</h3>
-                <p>The Metaverse is rapidly evolving with new virtual reality (VR) and augmented reality (AR) technologies emerging in 2024. Companies like Meta (formerly Facebook) and Microsoft are investing heavily in building virtual environments for work, social interaction, and entertainment.</p>
-            </div>
-        </div>
-
-        <!-- News Card 3 -->
-        <div class="news-card">
-            <div class="image-container">
-                <img src="eben (1).jpg" alt="Sustainable Tech Innovations">
-            </div>
-            <div class="content">
-                <h3>Sustainable Tech Innovations</h3>
-                <p>In response to climate change, tech companies are increasingly focusing on sustainability. Recent innovations in clean energy, like solar power efficiency improvements and sustainable battery technologies, are paving the way for a greener future.</p>
-            </div>
-        </div>
-
-        <!-- News Card 4 -->
-        <div class="news-card">
-            <div class="image-container">
-                <img src="eben (1).jpg" alt="Cybersecurity Advances">
-            </div>
-            <div class="content">
-                <h3>Cybersecurity Advances</h3>
-                <p>With the rise of cyber threats, cybersecurity has become more important than ever in 2024. Companies and governments are deploying AI-driven security systems to detect and prevent attacks in real time. The use of blockchain technology is also growing in cybersecurity, offering a decentralized solution for data protection.</p>
-            </div>
-        </div>
-
-        <!-- News Card 5 -->
-        <div class="news-card">
-            <div class="image-container">
-                <img src="eben (1).jpg" alt="AI in Healthcare">
-            </div>
-            <div class="content">
-                <h3>AI in Healthcare</h3>
-                <p>AI is making waves in the healthcare industry by assisting with everything from diagnostic tools to personalized medicine. A new AI-powered platform developed by researchers at Stanford University has shown promise in detecting early-stage cancer with greater accuracy than human doctors.</p>
-            </div>
-        </div>
-
-        <!-- News Card 6 -->
-        <div class="news-card">
-            <div class="image-container">
-                <img src="eben (1).jpg" alt="Self-Driving Cars">
-            </div>
-            <div class="content">
-                <h3>Self-Driving Cars</h3>
-                <p>Self-driving cars are another major advancement in technology, with companies like Waymo, Tesla, and Cruise testing fully autonomous vehicles. These cars use a combination of AI, machine learning, and sensor technologies to navigate roads with little or no human input.</p>
-            </div>
-        </div>
-
-        <!-- News Card 7 - New -->
-        <div class="news-card">
-            <div class="image-container">
-                <img src="eben (1).jpg" alt="Quantum Computing Breakthroughs">
-            </div>
-            <div class="content">
-                <h3>Quantum Computing Breakthroughs</h3>
-                <p>Quantum computing is showing incredible potential, with new breakthroughs in the development of quantum processors that could one day outperform classical computers in specific tasks. Tech giants like Google and IBM are leading the charge, and this could revolutionize fields like cryptography and artificial intelligence.</p>
-            </div>
-        </div>
-
-        <!-- News Card 8 - New -->
-        <div class="news-card">
-            <div class="image-container">
-                <img src="eben (1).jpg" alt="Space Exploration: Mars Missions">
-            </div>
-            <div class="content">
-                <h3>Space Exploration: Mars Missions</h3>
-                <p>In 2024, space agencies are intensifying efforts to send manned missions to Mars. With new rovers and spacecraft, scientists aim to explore the planet's surface and gather information that could help prepare for future human colonization.</p>
-            </div>
-        </div>
-    </div>
-
-    <a href="" class="up"><button type="submit">&UpArrow;</button></a>
 
     <!-- Footer Section -->
     <footer>
@@ -369,5 +211,9 @@
             <p>&copy; 2025 All Rights Reserved. Design by Ebenezer Kwame Egyir (More Things)</p>
         </div>
     </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
