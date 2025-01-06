@@ -4,447 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<style>
- body {
-    background-color: rgb(1, 9, 17);
-    color: white;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-@keyframes rotateBorder {
-    0% {
-        border-color: aqua; /* First color */
-    }
-    20% {
-        border-color: #FF5733; /* Red */
-    }
-    40% {
-        border-color: #33FF57; /* Green */
-    }
-    60% {
-        border-color: #3357FF; /* Blue */
-    }
-    80% {
-        border-color: #FF33A1; /* Pink */
-    }
-    100% {
-        border-color: aqua; /* Back to the first color */
-    }
-}
+<body class="bg-white text-dark">
 
-.centered_links {
-    text-transform: capitalize;
-    text-align: center;
-    padding-bottom: 40px;
-    border: 5px solid aqua;  /* Initial border color */
-    background-color: rgb(1, 1, 17);
-    margin: 1rem;
-    border-radius: 15px;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-    animation: rotateBorder 5s infinite; /* Apply the rotating border animation */
-}
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Eben's Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-.centered_links a{
-    text-decoration: none;
-    padding: 1rem;
-    color: white;
-}
-
-.intro{
-    font-size: 17px;
-    text-align: center;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 20px;
-}
-
-.downl_cv{ 
-    background-color: rgb(12, 62, 116);
-    border-radius: 8px;
-    border: 1px solid aqua;
-    font-weight: bold;
-    font-size:  16px;
-    margin: 1rem;
-    padding: 5px 10px;
-    transition-duration: .5s;
-}
-
-.downl_cv a{
-    text-decoration: none;
-    text-align: center;
-    color: white;
-}
-
-.downl_cv:hover{
-    background-color: darkgray;
-    border: none;
-}
-span {
-    font-size: 20px;
-    padding-left: 1vh;
-}
-
-.social_handles{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 2vh;
-    padding-top: 1rem;
-    cursor: pointer;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-.social_handles img{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-}
-
-.line {
-    text-align: center;
-    max-width: 400px;
-    font-size: 40px;
-    color: rgba(255, 255, 255, 0.774);
-}
-
-h2 ,p{
-    text-align: center;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-p a {
-   color: #007BFF;
-   color: aqua;
-   text-decoration: none;
-   font-weight: bold;
-   margin: 0 10px;
-}
-
-p a:hover {
-    text-decoration: underline;
-    color: #0056b3;
-}
-
-.profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: sans-serif;
-    padding-bottom: 25px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.profile h3 {
-    margin-bottom: 30px; /* Adjust spacing between text and image */
-    text-transform: uppercase;
-}
-
-.profile p{
-    max-width: 500px;
-}
-
-.profile img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 15px; /* Adjust spacing between image and text */
-}
-
-hr{
-    width: 300px;
-}
-
-
-footer {
-    background-color: rgb(1, 1, 17);
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin-top: 110px;
-    border-top: 1px solid aqua;
-}
-
-footer .footer-links {
-    margin-bottom: 20px;
-}
-
-footer .footer-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 1.1rem;
-}
-
-footer .footer-links a:hover {
-    color: aqua;
-}
-
-footer .footer-info p {
-    font-size: 1rem;
-}
-
-footer .footer-info p a {
-    color: white;
-    text-decoration: none;
-}
-
-footer .footer-info p a:hover {
-    color: aqua;
-}
-
-
-@media only screen and (min-width: 360px) and (max-width: 880px) {
-.centered_links {
-    text-transform: capitalize;
-    text-align: center;
-    padding-bottom: 40px;
-    border: 1px solid aqua;
-    background-color: rgb(1, 1, 17);
-    margin: 1rem;
-    border-radius: 15px;
-    padding: 20px;
-    width: 83%;
-    margin-left: 23px;
-    padding-right: px;
-    padding-left: 0px;
-    display: flex;
-    flex-direction: row;
-}
-
-.centered_links a{
-    text-decoration: none;
-    padding: 1rem;
-    color: white;
-}
-
-.intro{
-    font-size: 17px;
-    text-align: center;
-    width: 90%;
-    padding-top: 20px;
-}
-
-
-.profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: sans-serif;
-    padding-bottom: 25px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.profile h3 {
-    margin-bottom: 30px; /* Adjust spacing between text and image */
-    text-transform: uppercase;
-}
-
-.profile p{
-    width: 90%;
-}
-
-.profile img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-
-p{
-    width: 90%;
-}
-}
-
-
-@media only screen and (min-width: 412px) and (max-width: 915px) {
-.centered_links {
-    text-transform: capitalize;
-    text-align: center;
-    padding-bottom: 40px;
-    border: 1px solid aqua;
-    background-color: rgb(1, 1, 17);
-    margin: 1rem;
-    border-radius: 15px;
-    padding: 15px;
-    width: 83%;
-    margin-left: 23px;
-    padding-left: 1vh;
-    display: flex;
-    flex-direction: row;
-}
-
-.centered_links a{
-    text-decoration: none;
-    padding: 1rem;
-    color: white;
-    padding-left: 22px;
-}
-
-.intro{
-    font-size: 17px;
-    text-align: center;
-    width: 90%;
-    padding-top: 20px;
-}
-
-
-.profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: sans-serif;
-    padding-bottom: 25px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.profile h3 {
-    margin-bottom: 30px; /* Adjust spacing between text and image */
-    text-transform: uppercase;
-}
-
-.profile p{
-    width: 90%;
-}
-
-.profile img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-
-p{
-    width: 90%;
-}
-
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1280px) {
-.centered_links {
-    text-transform: capitalize;
-    text-align: center;
-    padding-bottom: 40px;
-    border: 1px solid aqua;
-    background-color: rgb(1, 1, 17);
-    margin: 1rem;
-    border-radius: 15px;
-    padding: 15px;
-    width: 83%;
-    margin-left: 20%;
-    padding-left: 6vh;
-    display: flex;
-    flex-direction: row;
-}
-
-.centered_links a{
-    text-decoration: none;
-    padding: 1rem;
-    color: white;
-    padding-left: 22px;
-}
-
-.intro{
-    font-size: 17px;
-    text-align: center;
-    width: 90%;
-    padding-top: 20px;
-}
-
-
-.profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: sans-serif;
-    padding-bottom: 25px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.profile h3 {
-    margin-bottom: 30px; /* Adjust spacing between text and image */
-    text-transform: uppercase;
-}
-
-.profile p{
-    width: 90%;
-}
-
-.profile img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-
-p{
-    width: 90%;
-}
-
-}
-</style>
-<body>
-
-    <div class="centered_links">
-        <a href="index.html">home</a>
-        <a href="service.html">service</a>
-        <a href="news.html">news</a>
-        <a href="contact.html">contact</a>
+    <!-- Intro Section -->
+    <div class="container text-center my-5">
+        <h1 class="text-primary">Hi, I'm Ebenezer, a front-end developer with four years of experience.</h1>
+        <p class="lead text-muted">I love creating websites and web apps that look great and work well. Right now, I’m focusing on improving my skills in Flask (back-end) and learning more about Python to expand what I can do.</p>
     </div>
 
-    <h1 class="intro">Hi, I'm Ebenezer, a front-end developer with four years of experience. I love creating websites and
-        web apps that look great and work well. Right now, I’m focusing on improving my skills in
-        Flask(back-end) and learning more about Python to expand what I can do.
-    </h1>
-    <div class="social_handles">
-        <button class="downl_cv"><a href="#">Download CV <span>&downarrow;</span></a></button>
-        <img src="instagram.png" alt="">
-        <img src="Whatsapp.png" alt="">
-    </div>
-    <p class="line">|</p>    
-   
-    <div class="profile">
-        <h3>about me</h3>
-        <img src="Ebens.jpg" alt="Profile Picture">
-        <p> After graduating from senior high school, I followed my passion for web development by enrolling
-            at IBB, where I completed an intensive seven-month program. This experience sparked a deeper
-            interest in technology and programming, leading me to pursue a three-year Higher National
-            Diploma (HND) in Information Technology at Takoradi Technical University (TTU). <br><br> During my
-            studies, I gained hands-on experience with various programming languages and technologies,
-            mastering C++, Java, Visual Basic, bootstrap and Python.
-            <br><br>
-            Beyond academics, I worked on several projects that honed my problem-solving skills and
-            strengthened my ability to create efficient and user-friendly solutions. My passion for coding and
-            continuous learning drives me to stay updated on emerging technologies, ensuring I can deliver
-            innovative solutions in the ever-evolving tech landscape.</p>    
+    <!-- Social Handles Section -->
+    <div class="text-center mb-4">
+        <a href="#" class="btn btn-info btn-lg">Download CV <span>&#8595;</span></a>
+        <div class="social-icons mt-3">
+            <a href="https://www.instagram.com/" class="mx-2">
+                <img src="instagram.png" alt="Instagram Logo" class="img-fluid rounded-circle" width="50">
+            </a>
+            <a href="https://wa.me/+233556764730" class="mx-2">
+                <img src="Whatsapp.png" alt="WhatsApp Logo" class="img-fluid rounded-circle" width="50">
+            </a>
+        </div>
     </div>
 
-     <hr>
-    
-     <p>To continue enjoying all the features and content on my website, kindly sign up if you’re new here. If you already have an account, simply log in to pick up right where you left off. <br> I look forward to providing you with great content and services!</p>
-    <p>
-        <a href="{{ url_for('signup') }}">Sign up</a>
-        <a href="{{ url_for('login') }}">Log in</a> 
-    </p>
-    </body>
-    
-<!-- Footer Section -->
-<footer>
-    <div class="footer-info">
-        <p>&copy; 2025 All Rights Reserved. Design by Ebenezer Kwame Egyir
+    <!-- About Me Section -->
+    <div class="container text-center my-5">
+        <h2 class="text-success">About Me</h2>
+        <img src="Ebens.jpg" alt="Profile Picture" class="img-fluid rounded-circle mb-3" width="150">
+        <p class="lead text-dark">
+            After graduating from senior high school, I followed my passion for web development by enrolling at IBB, where I completed an intensive seven-month program. This experience sparked a deeper interest in technology and programming, leading me to pursue a three-year Higher National Diploma (HND) in Information Technology at Takoradi Technical University (TTU).<br><br>
+            During my studies, I gained hands-on experience with various programming languages and technologies, mastering C++, Java, Visual Basic, bootstrap, and Python.<br><br>
+            Beyond academics, I worked on several projects that honed my problem-solving skills and strengthened my ability to create efficient and user-friendly solutions. My passion for coding and continuous learning drives me to stay updated on emerging technologies, ensuring I can deliver innovative solutions in the ever-evolving tech landscape.
+        </p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-light text-center py-4 text-dark">
+        <p>&copy; 2025 All Rights Reserved. Design by Ebenezer Kwame Egyir</p>
+    </footer>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
